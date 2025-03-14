@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "text": "Their development expertise enabled us to modernize our platform while maintaining business continuity. The team's careful planning and implementation has resulted in a much more efficient system that better serves our customers.",
+    "thumb": "9.jpg",
+    "name": "Amit Desai",
+    "designation": "Team Lead"
+  },
+  {
+    "id": 2,
+    "text": "The custom solution they built significantly streamlined our operations and improved customer satisfaction. Their agile methodology ensured we could provide feedback throughout the development process.",
+    "thumb": "10.jpg",
+    "name": "Nisha Malhotra",
+    "designation": "Software Engineer"
+  },
+  {
+    "id": 3,
+    "text": "Our collaboration with the team resulted in an application that perfectly suited our requirements. The attention to detail and focus on user experience has been particularly impressive.",
+    "thumb": "11.jpg",
+    "name": "Sanjay Kumar",
+    "designation": "Senior Software Engineer"
+  }
+]

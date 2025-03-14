@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "My Vision",
+    "textFirst": "Realizing a lifelong passion for",
+    "textLast": "technology and innovation",
+    "thumb": "11.png"
+  },
+  {
+    "id": 2,
+    "title": "AI-Powered Solutions",
+    "textFirst": "Transforming digital experiences with",
+    "textLast": "cutting-edge artificial intelligence",
+    "thumb": "12.png"
+  }
+]

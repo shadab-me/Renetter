@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "text": "Their development team delivered a high-quality web application that exceeded our expectations. The agile approach they used kept us involved throughout the entire process, and they were responsive to our feedback. The React.js frontend they built is incredibly fast and user-friendly.",
+    "name": "Vikram Patel",
+    "designation": "Senior Software Engineer, Leverage Edu",
+    "company": "Leverage Edu",
+    "logoColor": "#3367D6"
+  },
+  {
+    "id": 2,
+    "text": "We hired them to rebuild our legacy system using Ruby on Rails, and the results have been transformative for our business. The application is much faster, more reliable, and easier to maintain. Their development team showed exceptional technical expertise and attention to detail.",
+    "name": "Priya Sharma",
+    "designation": "Team Lead, Paytm",
+    "company": "Paytm",
+    "logoColor": "#00BCD4"
+  },
+  {
+    "id": 3,
+    "text": "Our mobile app development project was a great success. The React Native solution they built works flawlessly on both iOS and Android, saving us significant development time and cost. Their team was professional, communicative, and delivered exactly what we needed on schedule.",
+    "name": "Arjun Kapoor",
+    "designation": "Software Engineer, Byjus",
+    "company": "Byjus",
+    "logoColor": "#2196F3"
+  }
+]

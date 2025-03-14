@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFF8E1" />
+  
+  <!-- Design elements -->
+  <circle cx="150" cy="150" r="80" fill="#FFECB3" />
+  <rect x="600" y="300" width="150" height="150" rx="15" fill="#FFECB3" />
+  
+  <!-- Digital Transformation Illustration -->
+  <g transform="translate(200, 80)">
+    <!-- Building/Business icon -->
+    <rect x="50" y="120" width="120" height="150" fill="#FFFFFF" stroke="#FFA000" stroke-width="2" />
+    <rect x="80" y="140" width="25" height="40" fill="#FFD54F" />
+    <rect x="115" y="140" width="25" height="40" fill="#FFD54F" />
+    <rect x="80" y="190" width="25" height="40" fill="#FFD54F" />
+    <rect x="115" y="190" width="25" height="40" fill="#FFD54F" />
+    <path d="M50,120 L110,70 L170,120" fill="none" stroke="#FFA000" stroke-width="2" />
+    
+    <!-- Digital elements/transformation -->
+    <g transform="translate(220, 0)">
+      <!-- Binary/Digital pattern -->
+      <text x="0" y="130" font-family="monospace" font-size="14" fill="#FFA000">10110</text>
+      <text x="0" y="150" font-family="monospace" font-size="14" fill="#FFA000">01001</text>
+      <text x="0" y="170" font-family="monospace" font-size="14" fill="#FFA000">11010</text>
+      <text x="0" y="190" font-family="monospace" font-size="14" fill="#FFA000">00101</text>
+      <text x="0" y="210" font-family="monospace" font-size="14" fill="#FFA000">10110</text>
+      
+      <!-- Circuit board pattern -->
+      <path d="M60,130 L100,130 L100,170 L140,170" fill="none" stroke="#FFA000" stroke-width="2" />
+      <path d="M60,170 L80,170 L80,210 L140,210" fill="none" stroke="#FFA000" stroke-width="2" />
+      <path d="M60,210 L80,210" fill="none" stroke="#FFA000" stroke-width="2" />
+      
+      <circle cx="60" cy="130" r="5" fill="#FFA000" />
+      <circle cx="60" cy="170" r="5" fill="#FFA000" />
+      <circle cx="60" cy="210" r="5" fill="#FFA000" />
+      <circle cx="100" cy="130" r="5" fill="#FFA000" />
+      <circle cx="100" cy="170" r="5" fill="#FFA000" />
+      <circle cx="80" cy="210" r="5" fill="#FFA000" />
+      <circle cx="140" cy="170" r="5" fill="#FFA000" />
+      <circle cx="140" cy="210" r="5" fill="#FFA000" />
+    </g>
+    
+    <!-- Connecting arrow -->
+    <path d="M180,165 L220,165" fill="none" stroke="#FFA000" stroke-width="3" stroke-dasharray="5,5" />
+    <polygon points="220,165 210,160 210,170" fill="#FFA000" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#FF6F00">Digital Transformation</text>
+</svg>

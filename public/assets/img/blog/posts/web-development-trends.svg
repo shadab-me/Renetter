@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#E3F2FD" />
+  
+  <!-- Design elements -->
+  <circle cx="150" cy="100" r="70" fill="#BBDEFB" />
+  <rect x="550" y="300" width="200" height="150" rx="15" fill="#BBDEFB" />
+  
+  <!-- Code representation -->
+  <g transform="translate(300, 150)">
+    <rect x="0" y="0" width="240" height="180" rx="5" fill="#FFFFFF" stroke="#2196F3" stroke-width="2" />
+    <text x="20" y="40" font-family="monospace" font-size="16" fill="#1565C0">&lt;div class="app"&gt;</text>
+    <text x="40" y="70" font-family="monospace" font-size="16" fill="#1565C0">  &lt;header /&gt;</text>
+    <text x="40" y="100" font-family="monospace" font-size="16" fill="#1565C0">  &lt;main&gt;</text>
+    <text x="60" y="130" font-family="monospace" font-size="16" fill="#1565C0">    &lt;Content /&gt;</text>
+    <text x="40" y="160" font-family="monospace" font-size="16" fill="#1565C0">  &lt;/main&gt;</text>
+    <text x="20" y="190" font-family="monospace" font-size="16" fill="#1565C0">&lt;/div&gt;</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#0D47A1">Web Development Trends</text>
+</svg> 

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "listTitle": "Intelligent Automation",
+    "listText": "AI is integrated into every solution we build, automating tasks and processes to save time and reduce human error.",
+    "listLink": "services",
+    "listIcon": "fas fa-long-arrow-right",
+    "listAnimation": "fadeInLeft",
+    "animationDelay": "0ms"
+  },
+  {
+    "id": 2,
+    "listTitle": "Predictive Analytics",
+    "listText": "Our AI solutions analyze data patterns to provide actionable insights and forecast future trends with remarkable accuracy.",
+    "listLink": "services",
+    "listIcon": "fas fa-long-arrow-right",
+    "listAnimation": "fadeInLeft",
+    "animationDelay": "500ms"
+  },
+  {
+    "id": 3,
+    "listTitle": "Continuous Learning",
+    "listText": "Our AI systems continuously improve through machine learning, getting smarter and more effective with every interaction.",
+    "listLink": "services",
+    "listIcon": "fas fa-long-arrow-right",
+    "listAnimation": "fadeInLeft",
+    "animationDelay": "900ms"
+  }
+]

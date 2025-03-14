@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="40" fill="#EDF6FF"/>
+  <circle cx="40" cy="40" r="34" fill="#F5F9FF" stroke="#4285F4" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="20" y="22" width="40" height="30" rx="5" fill="url(#webGradient)" filter="url(#webShadow)"/>
+  <rect x="20" y="28" width="40" height="1" fill="white" fill-opacity="0.3"/>
+  <rect x="23" y="25" width="2" height="2" rx="1" fill="white"/>
+  <rect x="27" y="25" width="2" height="2" rx="1" fill="white"/>
+  <rect x="31" y="25" width="2" height="2" rx="1" fill="white"/>
+  <rect x="22" y="31" width="36" height="18" rx="2" fill="white" filter="url(#screenGlow)"/>
+  <path d="M29 55H51" stroke="url(#webGradient)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M36 55V58" stroke="url(#webGradient)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M44 55V58" stroke="url(#webGradient)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M32 58H48" stroke="url(#webGradient)" stroke-width="2" stroke-linecap="round"/>
+
+  <defs>
+    <linearGradient id="webGradient" x1="20" y1="22" x2="60" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#0F60D6"/>
+    </linearGradient>
+    <filter id="webShadow" x="17" y="19" width="46" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.26 0 0 0 0 0.52 0 0 0 0 0.96 0 0 0 0.6 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="screenGlow" x="21" y="30" width="38" height="20" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="0.5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.8 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+</svg> 

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "icon": "flaticon-cyber-security",
+    "number": "01",
+    "title": "Discovery & Planning",
+    "description": "We work closely with you to understand your business requirements, define project scope, and create a detailed roadmap and timeline."
+  },
+  {
+    "id": 2,
+    "icon": "flaticon-paper",
+    "number": "02",
+    "title": "Design & Architecture",
+    "description": "Our team designs intuitive user interfaces and develops a robust technical architecture that ensures scalability and performance."
+  },
+  {
+    "id": 3,
+    "icon": "flaticon-start-up",
+    "number": "03",
+    "title": "Development & Testing",
+    "description": "We follow agile methodologies with iterative development cycles, rigorous testing, and continuous client feedback to ensure quality."
+  },
+  {
+    "id": 4,
+    "icon": "flaticon-support-1",
+    "number": "04",
+    "title": "Deployment & Support",
+    "description": "After successful deployment, we provide ongoing maintenance, support, and enhancements to keep your application running optimally."
+  }
+]

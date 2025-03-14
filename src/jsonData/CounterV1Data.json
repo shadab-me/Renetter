@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "end": 2023,
+    "duration": 4,
+    "operator": "",
+    "text": "Founded Year"
+  },
+  {
+    "id": 2,
+    "end": 185,
+    "duration": 4,
+    "operator": "+",
+    "text": "Projects Completed"
+  }
+]

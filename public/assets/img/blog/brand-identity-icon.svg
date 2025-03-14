@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="40" fill="#FFF4E6"/>
+  <circle cx="40" cy="40" r="34" fill="#FFF9F0" stroke="#FF9800" stroke-width="1" stroke-dasharray="3 3"/>
+  <rect x="25" y="25" width="30" height="30" rx="15" fill="url(#brandGradient)" filter="url(#brandShadow)"/>
+  <circle cx="40" cy="40" r="10" fill="white" filter="url(#centerGlow)"/>
+  <path d="M37 37L43 43" stroke="url(#brandGradient)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M43 37L37 43" stroke="url(#brandGradient)" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="40" cy="40" r="15" stroke="white" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M23 40A17 17 0 0 1 40 23" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <path d="M57 40A17 17 0 0 1 40 57" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="23" cy="40" r="2" fill="white"/>
+  <circle cx="57" cy="40" r="2" fill="white"/>
+  <circle cx="40" cy="23" r="2" fill="white"/>
+  <circle cx="40" cy="57" r="2" fill="white"/>
+  
+  <defs>
+    <linearGradient id="brandGradient" x1="25" y1="25" x2="55" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFA726"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+    <filter id="brandShadow" x="22" y="22" width="36" height="36" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.596 0 0 0 0 0 0 0 0 0.6 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <filter id="centerGlow" x="27" y="27" width="26" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="1.5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.8 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+</svg> 

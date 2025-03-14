@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#E0F7FA" />
+  
+  <!-- Design elements -->
+  <circle cx="650" cy="150" r="80" fill="#B2EBF2" />
+  <rect x="100" y="350" width="150" height="100" rx="15" fill="#B2EBF2" />
+  
+  <!-- Content Marketing Illustration -->
+  <g transform="translate(250, 120)">
+    <!-- Document stack -->
+    <rect x="0" y="30" width="120" height="150" fill="#FFFFFF" stroke="#00ACC1" stroke-width="2" rx="5" />
+    <rect x="10" y="20" width="120" height="150" fill="#FFFFFF" stroke="#00ACC1" stroke-width="2" rx="5" />
+    <rect x="20" y="10" width="120" height="150" fill="#FFFFFF" stroke="#00ACC1" stroke-width="2" rx="5" />
+    
+    <!-- Document content lines -->
+    <line x1="40" y1="40" x2="110" y2="40" stroke="#00ACC1" stroke-width="2" />
+    <line x1="40" y1="60" x2="110" y2="60" stroke="#00ACC1" stroke-width="2" />
+    <line x1="40" y1="80" x2="110" y2="80" stroke="#00ACC1" stroke-width="2" />
+    <line x1="40" y1="100" x2="80" y2="100" stroke="#00ACC1" stroke-width="2" />
+    
+    <!-- Magnifying glass -->
+    <circle cx="190" cy="100" r="35" fill="none" stroke="#00ACC1" stroke-width="3" />
+    <line x1="215" y1="125" x2="240" y2="150" stroke="#00ACC1" stroke-width="3" />
+    <line x1="175" y1="85" x2="205" y2="85" stroke="#00ACC1" stroke-width="2" />
+    <line x1="190" y1="70" x2="190" y2="100" stroke="#00ACC1" stroke-width="2" />
+    
+    <!-- Connection lines -->
+    <path d="M150,80 C170,80 170,80 180,80" fill="none" stroke="#00ACC1" stroke-width="2" stroke-dasharray="5,5" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#006064">Content Marketing</text>
+</svg> 

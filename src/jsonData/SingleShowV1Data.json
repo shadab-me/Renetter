@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "listTitle": "AI Solutions",
+    "listText": "Machine learning, NLP, intelligent chatbots & predictive analytics"
+  },
+  {
+    "id": 2,
+    "listTitle": "Web Development",
+    "listText": "Modern, responsive websites with cutting-edge frameworks"
+  },
+  {
+    "id": 3,
+    "listTitle": "Mobile App Development",
+    "listText": "High-performance apps for iOS and Android"
+  },
+  {
+    "id": 4,
+    "listTitle": "Digital Strategy & Consulting",
+    "listText": "Strategic consulting and digital transformation"
+  }
+]

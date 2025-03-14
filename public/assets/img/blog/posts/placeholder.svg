@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="50" fill="#e9ecef" />
+  <circle cx="700" cy="400" r="70" fill="#e9ecef" />
+  <rect x="200" y="300" width="150" height="150" rx="10" fill="#e9ecef" />
+  
+  <!-- Placeholder text -->
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#6c757d">Blog Image</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#adb5bd">800 × 500</text>
+  
+  <!-- Image icon -->
+  <g transform="translate(350, 150)">
+    <rect x="0" y="0" width="100" height="80" rx="5" fill="none" stroke="#6c757d" stroke-width="3" />
+    <polygon points="30,60 70,60 50,30" fill="#6c757d" />
+    <circle cx="25" cy="25" r="10" fill="#6c757d" />
+  </g>
+</svg> 

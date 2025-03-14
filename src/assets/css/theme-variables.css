@@ -1,0 +1,219 @@
+/* Digital Agency Theme Variables */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&family=JetBrains+Mono&display=swap");
+
+:root {
+  /* Primary Colors */
+  --color-primary: #3498db; /* Main Blue */
+  --color-secondary: #1abc9c; /* Secondary Teal */
+
+  /* Accent Colors */
+  --color-accent-coral: #ff6b6b; /* Bright Coral */
+  --color-accent-green: #2ecc71; /* Deep Green */
+
+  /* Neutral Backgrounds */
+  --color-light-gray: #f8f9fa; /* Light Gray */
+  --color-dark-gray: #333333; /* Dark Gray */
+
+  /* Call-to-Action Colors */
+  --color-cta-gold: #f1c40f; /* Gold */
+  --color-cta-purple: #9b59b6; /* Purple */
+
+  /* Font Family */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Font Sizes for Headings */
+  --font-size-h1: 36px;
+  --font-size-h2: 28px;
+  --font-size-h3: 24px;
+  --font-size-h4: 20px;
+  --font-size-h5: 18px;
+  --font-size-h6: 16px;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-body: 1.5;
+  --line-height-heading: 1.2;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+}
+
+/* Override default styles with our variables */
+body,
+p,
+li,
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+  color: var(--color-dark-gray);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-dark-gray);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-regular);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Button Styles */
+.btn-theme,
+.btn.btn-theme {
+  background-color: var(--color-primary);
+}
+
+.btn-theme:hover,
+.btn.btn-theme:hover {
+  background-color: var(--color-secondary);
+}
+
+.btn-secondary,
+.btn.btn-secondary {
+  background-color: var(--color-secondary);
+}
+
+/* Accent Colors Classes */
+.bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+.bg-accent-coral {
+  background-color: var(--color-accent-coral) !important;
+}
+
+.bg-accent-green {
+  background-color: var(--color-accent-green) !important;
+}
+
+.bg-light-gray {
+  background-color: var(--color-light-gray) !important;
+}
+
+.bg-dark-gray {
+  background-color: var(--color-dark-gray) !important;
+}
+
+.bg-cta-gold {
+  background-color: var(--color-cta-gold) !important;
+}
+
+.bg-cta-purple {
+  background-color: var(--color-cta-purple) !important;
+}
+
+.text-primary {
+  color: var(--color-primary) !important;
+}
+
+.text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+.text-accent-coral {
+  color: var(--color-accent-coral) !important;
+}
+
+.text-accent-green {
+  color: var(--color-accent-green) !important;
+}
+
+.text-light-gray {
+  color: var(--color-light-gray) !important;
+}
+
+.text-dark-gray {
+  color: var(--color-dark-gray) !important;
+}
+
+.text-cta-gold {
+  color: var(--color-cta-gold) !important;
+}
+
+.text-cta-purple {
+  color: var(--color-cta-purple) !important;
+}
+
+/* Override existing theme elements */
+:root {
+  --color-heading: var(--color-dark-gray);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --font-default: var(--font-body);
+  --font-heading: var(--font-heading);
+}
+
+.text-theme {
+  color: var(--color-primary) !important;
+}
+
+.bg-theme {
+  background-color: var(--color-primary) !important;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+/* Override for ProjectInMind component */
+.project-in-mind-area .title .text-theme {
+  color: var(--color-primary) !important;
+}
+
+.btn.btn-light.effect:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}

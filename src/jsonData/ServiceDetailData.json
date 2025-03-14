@@ -1,0 +1,302 @@
+[
+  {
+    "id": "ruby-on-rails",
+    "title": "Ruby on Rails Development",
+    "breadcrumbTitle": "Ruby on Rails Development",
+    "yearsOfExperience": "12+ years",
+    "headingText": "of web development using Ruby on Rails",
+    "description": "BigBinary has 12+ years of experience working with Ruby on Rails. We were early adopters of Ruby on Rails after realising its exceptional productivity compared to other technologies. We worked with Ruby on Rails and started contributing towards it, leading to our in-depth understanding of the framework's intricacies. Through these contributions, we not only enhanced our skills but also shared our knowledge by writing blogs.",
+    "metaDescription": "Expert Ruby on Rails development services with 12+ years of experience building scalable web applications",
+    "metaKeywords": "Ruby on Rails, web development, Ruby, Rails consulting",
+    "icon": "gem",
+    "features": [
+      {
+        "title": "API Development",
+        "description": "We build robust and well-documented APIs using Ruby on Rails that integrate seamlessly with frontend applications.",
+        "icon": "plug"
+      },
+      {
+        "title": "Database Optimization",
+        "description": "Our team ensures your Rails application's database is properly structured, indexed, and optimized for performance.",
+        "icon": "database"
+      },
+      {
+        "title": "Rails Upgrades",
+        "description": "We help upgrade legacy Rails applications to the latest version, ensuring security and performance improvements.",
+        "icon": "arrow-up"
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "We identify and fix performance bottlenecks in your Rails application to ensure maximum speed and efficiency.",
+        "icon": "tachometer-alt"
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "E-commerce Platform Optimization",
+        "description": "Improved load times by 70% for a high-traffic Rails e-commerce platform by optimizing database queries and implementing caching.",
+        "image": "/img/case-studies/rails-1.jpg"
+      },
+      {
+        "title": "Healthcare Management System",
+        "description": "Built a HIPAA-compliant healthcare management system using Rails with custom authentication and authorization.",
+        "image": "/img/case-studies/rails-2.jpg"
+      },
+      {
+        "title": "FinTech Application",
+        "description": "Developed a secure financial services platform with Rails backend, handling millions of transactions daily.",
+        "image": "/img/case-studies/rails-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "react-development",
+    "title": "React.js Development",
+    "breadcrumbTitle": "React.js Development",
+    "yearsOfExperience": "8+ years",
+    "headingText": "of creating modern UIs using React.js",
+    "description": "Our team has extensive experience in building responsive, high-performance web applications with React.js. We focus on creating engaging user interfaces with modern React features including hooks, context API, and server components. Our expertise helps businesses deliver seamless user experiences across all devices and platforms.",
+    "metaDescription": "Expert React.js development services creating modern, responsive web applications with optimal performance",
+    "metaKeywords": "React.js, frontend development, UI/UX, web applications",
+    "icon": "react",
+    "features": [
+      {
+        "title": "Custom Component Development",
+        "description": "We build reusable, efficient React components tailored to your specific business needs.",
+        "icon": "puzzle-piece"
+      },
+      {
+        "title": "State Management",
+        "description": "We implement robust state management solutions using Redux, Context API, or other state management libraries.",
+        "icon": "layer-group"
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "Our team ensures your React application loads quickly and runs smoothly through code splitting, lazy loading, and memoization.",
+        "icon": "tachometer-alt"
+      },
+      {
+        "title": "React Migration",
+        "description": "We help migrate legacy frontends to modern React architecture, improving maintainability and performance.",
+        "icon": "exchange-alt"
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Dashboard UI Revamp",
+        "description": "Redesigned and implemented a complex analytics dashboard using React, improving user engagement by 45%.",
+        "image": "/img/case-studies/react-1.jpg"
+      },
+      {
+        "title": "E-Learning Platform",
+        "description": "Built an interactive e-learning platform with React that supports real-time collaboration and video streaming.",
+        "image": "/img/case-studies/react-2.jpg"
+      },
+      {
+        "title": "Social Media Application",
+        "description": "Developed a performant social media application frontend with React that handles thousands of concurrent users.",
+        "image": "/img/case-studies/react-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "react-native",
+    "title": "React Native Development",
+    "breadcrumbTitle": "React Native Development",
+    "yearsOfExperience": "6+ years",
+    "headingText": "of mobile app development using React Native",
+    "description": "We create cross-platform mobile applications using React Native, delivering native-like performance and user experience while maintaining a single codebase for iOS and Android. Our React Native expertise allows us to build feature-rich mobile apps that work seamlessly across different devices and operating systems.",
+    "metaDescription": "Professional React Native development services for cross-platform mobile applications with native performance",
+    "metaKeywords": "React Native, mobile app development, cross-platform, iOS, Android",
+    "icon": "mobile-alt",
+    "features": [
+      {
+        "title": "Cross-Platform Development",
+        "description": "We build apps that work seamlessly on both iOS and Android from a single codebase, saving time and resources.",
+        "icon": "mobile"
+      },
+      {
+        "title": "Native Module Integration",
+        "description": "Our team can integrate native modules and third-party SDKs to enhance your React Native application's capabilities.",
+        "icon": "puzzle-piece"
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "We optimize React Native apps for smooth animations, fast load times, and efficient memory usage.",
+        "icon": "tachometer-alt"
+      },
+      {
+        "title": "Offline Functionality",
+        "description": "We implement robust offline capabilities to ensure your app works even when users have limited or no connectivity.",
+        "icon": "wifi-slash"
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Fitness Tracking App",
+        "description": "Developed a comprehensive fitness tracking application with React Native that integrates with health data and wearable devices.",
+        "image": "/img/case-studies/rn-1.jpg"
+      },
+      {
+        "title": "Food Delivery Platform",
+        "description": "Built a high-performance food delivery app with real-time order tracking and payment processing.",
+        "image": "/img/case-studies/rn-2.jpg"
+      },
+      {
+        "title": "Travel Companion App",
+        "description": "Created a feature-rich travel app with offline maps, translation features, and local recommendations.",
+        "image": "/img/case-studies/rn-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "api-development",
+    "title": "API Development",
+    "breadcrumbTitle": "API Development",
+    "yearsOfExperience": "10+ years",
+    "headingText": "of building robust and secure APIs",
+    "description": "We provide comprehensive API development services, creating robust and secure RESTful and GraphQL APIs that enable seamless integration between different systems and applications. Our API expertise ensures that your systems can communicate efficiently while maintaining security and performance standards.",
+    "metaDescription": "Expert API development services creating secure, scalable REST and GraphQL APIs for seamless system integration",
+    "metaKeywords": "API development, RESTful API, GraphQL, system integration",
+    "icon": "plug",
+    "features": [
+      {
+        "title": "RESTful API Design",
+        "description": "We design and implement RESTful APIs following best practices for resource naming, versioning, and status codes.",
+        "icon": "sitemap"
+      },
+      {
+        "title": "GraphQL API Development",
+        "description": "Our team builds flexible GraphQL APIs that allow clients to request exactly the data they need, reducing over-fetching.",
+        "icon": "project-diagram"
+      },
+      {
+        "title": "API Security",
+        "description": "We implement robust authentication, authorization, and rate limiting to protect your APIs from abuse and unauthorized access.",
+        "icon": "shield-alt"
+      },
+      {
+        "title": "API Documentation",
+        "description": "We provide comprehensive API documentation using tools like Swagger/OpenAPI to make integration straightforward for developers.",
+        "icon": "file-alt"
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Payment Gateway Integration",
+        "description": "Developed a secure payment processing API that handles thousands of transactions daily with 99.99% uptime.",
+        "image": "/img/case-studies/api-1.jpg"
+      },
+      {
+        "title": "E-commerce API Platform",
+        "description": "Built a comprehensive e-commerce API suite that powers web, mobile, and partner integrations for a major retailer.",
+        "image": "/img/case-studies/api-2.jpg"
+      },
+      {
+        "title": "IoT Device Management",
+        "description": "Created APIs for managing and collecting data from thousands of IoT devices in real-time.",
+        "image": "/img/case-studies/api-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "cloud-solutions",
+    "title": "Cloud Solutions",
+    "breadcrumbTitle": "Cloud Solutions",
+    "yearsOfExperience": "9+ years",
+    "headingText": "of implementing cloud-based infrastructure",
+    "description": "We implement reliable cloud-based solutions using AWS, Azure, and Google Cloud. Our services include deployment automation, serverless architecture, and cloud infrastructure management. We help businesses leverage the full potential of cloud computing to improve scalability, reliability, and cost-efficiency.",
+    "metaDescription": "Comprehensive cloud solutions on AWS, Azure, and Google Cloud for optimized infrastructure and scalability",
+    "metaKeywords": "cloud computing, AWS, Azure, Google Cloud, serverless, infrastructure",
+    "icon": "cloud",
+    "features": [
+      {
+        "title": "Cloud Migration",
+        "description": "We help businesses move their applications and data to the cloud safely and efficiently with minimal downtime.",
+        "icon": "exchange-alt"
+      },
+      {
+        "title": "Serverless Architecture",
+        "description": "Our team designs and implements serverless solutions that scale automatically and reduce operational costs.",
+        "icon": "server"
+      },
+      {
+        "title": "Infrastructure as Code",
+        "description": "We use tools like Terraform and CloudFormation to automate infrastructure provisioning and management.",
+        "icon": "code"
+      },
+      {
+        "title": "Cloud Cost Optimization",
+        "description": "We identify opportunities to optimize cloud spending without sacrificing performance or reliability.",
+        "icon": "money-bill-wave"
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "E-learning Platform Migration",
+        "description": "Migrated a traditional e-learning platform to AWS, reducing hosting costs by 40% while improving reliability and scalability.",
+        "image": "/img/case-studies/cloud-1.jpg"
+      },
+      {
+        "title": "Serverless Data Processing",
+        "description": "Built a serverless data processing pipeline on Azure that handles millions of records daily with minimal operational overhead.",
+        "image": "/img/case-studies/cloud-2.jpg"
+      },
+      {
+        "title": "Multi-Cloud Strategy",
+        "description": "Implemented a multi-cloud strategy for a financial services company, ensuring high availability and disaster recovery.",
+        "image": "/img/case-studies/cloud-3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "technology-consulting",
+    "title": "Technology Consulting",
+    "breadcrumbTitle": "Technology Consulting",
+    "yearsOfExperience": "15+ years",
+    "headingText": "of strategic technology consulting",
+    "description": "We offer strategic consulting services to help businesses navigate digital transformation, improve their software development processes, and adopt modern technologies effectively. Our experienced consultants provide guidance on technology selection, architecture design, and process optimization to help you achieve your business goals.",
+    "metaDescription": "Strategic technology consulting services for digital transformation, software development, and modern technology adoption",
+    "metaKeywords": "technology consulting, digital transformation, software development, IT strategy",
+    "icon": "lightbulb",
+    "features": [
+      {
+        "title": "Digital Transformation Strategy",
+        "description": "We help businesses develop comprehensive strategies for digital transformation that align with their goals and capabilities.",
+        "icon": "chart-line"
+      },
+      {
+        "title": "Technology Stack Selection",
+        "description": "Our experts provide guidance on selecting the right technologies and tools for your specific business requirements.",
+        "icon": "layer-group"
+      },
+      {
+        "title": "Software Development Process",
+        "description": "We help optimize your development processes using Agile, DevOps, and other modern methodologies.",
+        "icon": "sync"
+      },
+      {
+        "title": "Code Quality Assessment",
+        "description": "We review your existing codebase to identify technical debt, security vulnerabilities, and opportunities for improvement.",
+        "icon": "code-branch"
+      }
+    ],
+    "caseStudies": [
+      {
+        "title": "Enterprise Digital Transformation",
+        "description": "Guided a large enterprise through a complete digital transformation, modernizing legacy systems and improving productivity by 35%.",
+        "image": "/img/case-studies/consulting-1.jpg"
+      },
+      {
+        "title": "Startup Technology Strategy",
+        "description": "Helped a technology startup select the right tech stack and development methodology, enabling rapid product development and market entry.",
+        "image": "/img/case-studies/consulting-2.jpg"
+      },
+      {
+        "title": "Software Development Process Overhaul",
+        "description": "Transformed a traditional waterfall development process to Agile, reducing time-to-market by 60% and improving quality.",
+        "image": "/img/case-studies/consulting-3.jpg"
+      }
+    ]
+  }
+]
