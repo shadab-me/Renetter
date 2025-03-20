@@ -13,5 +13,17 @@ export default defineConfig({
     assetsDir: "assets",
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      external: [],
+      output: {
+        manualChunks: undefined,
+      },
+    },
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom"],
   },
 });
