@@ -1,0 +1,87 @@
+/* Import all necessary styles */
+@import "style.css";
+@import "animations.css";
+@import "responsive.css";
+@import "elegant-icons.css";
+@import "flaticon-set.css";
+
+/* Fix text size adjust */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Fix team info styles */
+.team-right-info .social ul li a {
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  line-height: 47px;
+  background: #f1f1f1;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--color-heading);
+}
+
+.team-single-area .bottom-info h2 {
+  font-weight: 800;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+/* Fix button animation styles */
+.btn.btn-border-dark.animation::after {
+  position: absolute;
+  top: 0;
+  right: inherit;
+  bottom: inherit;
+  left: 0;
+  content: "";
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  background: var(--dark);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn.btn-border-dark.animation:hover {
+  border-color: var(--dark);
+  color: var(--white);
+}
+
+.btn.btn-border-dark.animation:hover::after {
+  width: 100%;
+}
+
+/* Fix image paths */
+.banner-style-three-area {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-style-three-area::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: url("/img/shape/banner-5.jpg") center center/cover no-repeat;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.shape-left-top {
+  background: url("/img/shape/left-top.png") no-repeat;
+}
+
+.shape-right-bottom {
+  background: url("/img/shape/right-bottom.png") no-repeat;
+}
+
+.banner-shape {
+  background: url("/img/shape/banner-shape.png") no-repeat;
+}
