@@ -20,15 +20,12 @@ import "../src/assets/css/custom.css";
 
 import Routers from "./Routers";
 import ScrollUpBtn from "./components/others/ScrollUpBtn";
-import Preloader from "./components/others/Preloader";
 import { ToastContainer } from "react-toastify";
 import { Helmet } from "react-helmet";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   //  Preloader
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Change favicon programmatically to ensure it overrides cache
@@ -44,60 +41,103 @@ function App() {
       document.head.appendChild(newLink);
     };
 
-    // Set timeout for preloader
-    setTimeout(() => {
-      setIsLoading(false);
-      // Change favicon after preloader completes
-      changeFavicon();
-    }, 1200);
+    changeFavicon();
   }, []);
+
+  // Default schema for organization
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "RENETTER AGENCY",
+    url: "https://renetter.com",
+    logo: "https://renetter.com/img/logo/logo.png",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+919XXXXXXXXX",
+      contactType: "customer service",
+      areaServed: [
+        "Moradabad",
+        "Sambhal",
+        "Rampur",
+        "Amroha",
+        "Bijnor",
+        "Uttar Pradesh",
+      ],
+      availableLanguage: ["English", "Hindi"],
+    },
+    sameAs: [
+      "https://www.facebook.com/renetteragency",
+      "https://www.instagram.com/renetteragency",
+      "https://www.linkedin.com/company/renetteragency",
+    ],
+  };
 
   return (
     <>
-      {isLoading ? (
-        <Preloader />
-      ) : (
-        <div>
-          <Helmet>
-            <title>
-              RENETTER AGENCY Digital Solutions, Engineered for Growth
-            </title>
-            <meta
-              name="description"
-              content="Renetter – Digital Solutions, Engineered for Growth. We transform businesses with innovative digital solutions powered by cutting-edge technology."
-            />
-            <meta
-              name="keywords"
-              content="AI, artificial intelligence, web development, mobile apps, digital agency, machine learning, digital transformation"
-            />
-            <meta
-              property="og:title"
-              content="RENETTER AGENCY - Digital Solutions, Engineered for Growth"
-            />
-            <meta
-              property="og:description"
-              content="Digital Solutions, Engineered for Growth. Transforming businesses with innovative digital solutions powered by cutting-edge technology."
-            />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://renetter.com" />
-            <meta property="og:image" content="/img/logo/logo.png" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta
-              name="twitter:title"
-              content="RENETTER AGENCY - Digital Solutions, Engineered for Growth"
-            />
-            <meta
-              name="twitter:description"
-              content="Digital Solutions, Engineered for Growth. Transforming businesses with innovative digital solutions powered by cutting-edge technology."
-            />
-            <meta name="twitter:image" content="/img/logo/logo.png" />
-            <link rel="canonical" href="https://renetter.com" />
-          </Helmet>
-          <Routers />
-          <ScrollUpBtn />
-          <ToastContainer />
-        </div>
-      )}
+      <div>
+        <Helmet>
+          <title>
+            RENETTER AGENCY - Digital Solutions Provider in Moradabad, UP
+          </title>
+          <meta
+            name="description"
+            content="Renetter – Digital Solutions, Engineered for Growth. We transform businesses in Moradabad and nearby areas with innovative digital solutions powered by cutting-edge technology."
+          />
+          <meta
+            name="keywords"
+            content="AI, artificial intelligence, web development, mobile apps, digital agency, machine learning, digital transformation, Moradabad, Uttar Pradesh, UP, website development"
+          />
+          <meta
+            property="og:title"
+            content="RENETTER AGENCY - Digital Solutions Provider in Moradabad, UP"
+          />
+          <meta
+            property="og:description"
+            content="Digital Solutions, Engineered for Growth. Transforming businesses in Moradabad with innovative digital solutions powered by cutting-edge technology."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://renetter.com" />
+          <meta property="og:image" content="/img/logo/logo.png" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:title"
+            content="RENETTER AGENCY - Digital Solutions Provider in Moradabad, UP"
+          />
+          <meta
+            name="twitter:description"
+            content="Digital Solutions, Engineered for Growth. Transforming businesses in Moradabad with innovative digital solutions powered by cutting-edge technology."
+          />
+          <meta name="twitter:image" content="/img/logo/logo.png" />
+          <link rel="canonical" href="https://renetter.com" />
+
+          {/* Additional SEO Meta tags */}
+          <meta name="robots" content="index, follow" />
+          <meta name="language" content="English" />
+          <meta name="revisit-after" content="7 days" />
+          <meta name="author" content="RENETTER AGENCY" />
+
+          {/* Geo Tags for Local SEO */}
+          <meta name="geo.region" content="IN-UP" />
+          <meta name="geo.placename" content="Moradabad" />
+          <meta name="geo.position" content="28.8386;78.7733" />
+          <meta name="ICBM" content="28.8386, 78.7733" />
+
+          {/* Mobile Optimization */}
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=5"
+          />
+          <meta name="theme-color" content="#3498DB" />
+
+          {/* Organization Schema */}
+          <script type="application/ld+json">
+            {JSON.stringify(organizationSchema)}
+          </script>
+        </Helmet>
+        <Routers />
+        <ScrollUpBtn />
+        <ToastContainer />
+      </div>
     </>
   );
 }

@@ -218,25 +218,14 @@ const FooterV1 = () => {
 
               <div className="col-lg-3 col-md-6 footer-item mt-50">
                 <div className="f-item link">
-                  <h4 className="widget-title">PRODUCTS</h4>
-                  <ul>
-                    <li>
-                      <Link to="/#">Renetter AI Suite</Link>
-                    </li>
-                    <li>
-                      <Link to="/#">Renetter Academy</Link>
-                    </li>
-                  </ul>
-                  <div className="contact-info mt-30">
-                    <h5>Contact Us</h5>
-                    <p>
-                      Email:{" "}
-                      <a href="mailto:info@renetter.com">info@renetter.com</a>
-                    </p>
-                    <p>
-                      Phone: <a href="tel:+919411078560">+91 9411078560</a>
-                    </p>
-                  </div>
+                  <h5>Contact Us</h5>
+                  <p>
+                    Email:{" "}
+                    <a href="mailto:info@renetter.com">info@renetter.com</a>
+                  </p>
+                  <p>
+                    Phone: <a href="tel:+919411078560">+91 9411078560</a>
+                  </p>
                 </div>
               </div>
             </div>
