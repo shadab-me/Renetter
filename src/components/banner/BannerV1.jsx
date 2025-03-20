@@ -1,8 +1,9 @@
 import React from "react";
 import { toast } from "react-toastify";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
 import { mainHeadingDarkStyle } from "../../styles/CommonStyles";
+import { getImagePath } from "../../utils/assetPaths";
 
 const BannerV1 = () => {
   const handleEmail = (event) => {
@@ -11,23 +12,49 @@ const BannerV1 = () => {
     toast.success("Thanks for your interest! We'll be in touch shortly.");
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <>
       <div
         className="banner-style-three-area overflow-hidden"
-        style={{ backgroundImage: "url(/img/shape/banner-5.jpg)" }}
+        style={{
+          backgroundImage: `url(${getImagePath("shape/banner-5.jpg")})`,
+        }}
       >
         <div className="banner-style-three pt-120 pb-120 pt-xs-60">
           <div className="container">
             <div className="content">
               <div className="row align-center">
                 <div className="col-xl-8 col-lg-8 pr-50 pr-md-15 pr-xs-15 mt--80 mt-md-0 mt-xs-0">
-                  <div className="information">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.5 }}
-                    >
+                  <motion.div
+                    className="information"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
+                    <motion.div variants={itemVariants}>
                       <h2 style={mainHeadingDarkStyle}>
                         Renetter
                         <br />
@@ -37,11 +64,7 @@ const BannerV1 = () => {
                         Engineered for Growth
                       </h2>
                     </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.9 }}
-                    >
+                    <motion.div variants={itemVariants}>
                       <p>
                         At Renetter, we are a team of passionate developers
                         dedicated to building high-performance web and mobile
@@ -49,18 +72,43 @@ const BannerV1 = () => {
                         meet expectations but set new benchmarks for success.
                       </p>
                     </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 1.2 }}
-                    >
-                      <div className="button">
-                        <Link className="btn btn-md btn-theme" to="/contact-us">
-                          Let's Talk
-                        </Link>
-                      </div>
+
+                    <motion.div variants={itemVariants}>
+                      <form onSubmit={handleEmail}>
+                        <input
+                          type="email"
+                          placeholder="Your Email"
+                          className="form-control"
+                          name="email"
+                          required
+                        />
+                        <button type="submit">
+                          <i className="fas fa-arrow-right"></i>
+                        </button>
+                      </form>
                     </motion.div>
-                  </div>
+
+                    <motion.div variants={itemVariants}>
+                      <ul className="feature-fun-fact mt-30">
+                        <li>
+                          <div className="fun-fact">
+                            <div className="counter">
+                              <span className="timer">95</span>%
+                            </div>
+                            <span className="medium">Client Satisfaction</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="fun-fact">
+                            <div className="counter">
+                              <span className="timer">100</span>%
+                            </div>
+                            <span className="medium">Project Delivery</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </motion.div>
+                  </motion.div>
                 </div>
                 <div className="col-xl-6 col-lg-6 pl-60 pl-md-15 pl-xs-15">
                   <div className="thumb">
