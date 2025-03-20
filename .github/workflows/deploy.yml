@@ -24,21 +24,21 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18.20.7"
+          node-version: "18.x"
           cache: "npm"
 
-      - name: Clean install dependencies
+      - name: Install dependencies
         run: |
-          rm -rf node_modules
-          rm -f package-lock.json
-          npm install --no-package-lock
-          npm install @rollup/rollup-linux-x64-gnu --no-save
+          npm config set legacy-peer-deps true
+          npm install --prefer-offline --no-audit
+          npm install @rollup/rollup-linux-x64-gnu@4.9.6 --no-save
 
       - name: Build
         run: npm run build
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
           ROLLUP_NATIVE_BUILD: "false"
+          ROLLUP_SKIP_LOAD_NATIVE: "true"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
