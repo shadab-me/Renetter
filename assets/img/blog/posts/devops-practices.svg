@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#E8F5E9" />
+  
+  <!-- Design elements -->
+  <circle cx="150" cy="400" r="80" fill="#C8E6C9" />
+  <rect x="600" y="100" width="150" height="150" rx="15" fill="#C8E6C9" />
+  
+  <!-- DevOps Infinity Symbol -->
+  <g transform="translate(250, 150) scale(2)">
+    <path d="M70,65 C70,94.279 94.279,118 124,118 C139.889,118 154.326,112.064 165,100 C175.674,87.936 190.111,82 206,82 C235.721,82 260,105.721 260,135 C260,164.279 235.721,188 206,188 C190.111,188 175.674,182.064 165,170 C154.326,157.936 139.889,152 124,152 C94.279,152 70,175.721 70,205" 
+          fill="none" stroke="#4CAF50" stroke-width="10" stroke-linecap="round"/>
+          
+    <!-- Gear symbols -->
+    <circle cx="124" cy="118" r="25" fill="#A5D6A7" stroke="#4CAF50" stroke-width="3"/>
+    <path d="M124,100 L124,136" stroke="#4CAF50" stroke-width="3" />
+    <path d="M115,109 L133,127" stroke="#4CAF50" stroke-width="3" />
+    <path d="M115,127 L133,109" stroke="#4CAF50" stroke-width="3" />
+    
+    <circle cx="206" cy="188" r="25" fill="#A5D6A7" stroke="#4CAF50" stroke-width="3"/>
+    <path d="M206,170 L206,206" stroke="#4CAF50" stroke-width="3" />
+    <path d="M197,179 L215,197" stroke="#4CAF50" stroke-width="3" />
+    <path d="M197,197 L215,179" stroke="#4CAF50" stroke-width="3" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#2E7D32">DevOps Practices</text>
+</svg> 
