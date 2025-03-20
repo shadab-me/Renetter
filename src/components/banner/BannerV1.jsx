@@ -49,12 +49,12 @@ const BannerV1 = () => {
               <div className="row align-center">
                 <div className="col-xl-8 col-lg-8 pr-50 pr-md-15 pr-xs-15 mt--80 mt-md-0 mt-xs-0">
                   <motion.div
-                    className="information"
+                    className="information framer-container"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
                   >
-                    <motion.div variants={itemVariants}>
+                    <motion.div className="framer-item" variants={itemVariants}>
                       <h2 style={mainHeadingDarkStyle}>
                         Renetter
                         <br />
@@ -64,7 +64,7 @@ const BannerV1 = () => {
                         Engineered for Growth
                       </h2>
                     </motion.div>
-                    <motion.div variants={itemVariants}>
+                    <motion.div className="framer-item" variants={itemVariants}>
                       <p>
                         At Renetter, we are a team of passionate developers
                         dedicated to building high-performance web and mobile
@@ -73,7 +73,7 @@ const BannerV1 = () => {
                       </p>
                     </motion.div>
 
-                    <motion.div variants={itemVariants}>
+                    <motion.div className="framer-item" variants={itemVariants}>
                       <form onSubmit={handleEmail}>
                         <input
                           type="email"
@@ -88,7 +88,7 @@ const BannerV1 = () => {
                       </form>
                     </motion.div>
 
-                    <motion.div variants={itemVariants}>
+                    <motion.div className="framer-item" variants={itemVariants}>
                       <ul className="feature-fun-fact mt-30">
                         <li>
                           <div className="fun-fact">

@@ -17,6 +17,8 @@ import "../src/assets/css/unit-test.css";
 import "../src/assets/css/spacing.css";
 import "../src/assets/css/style.css";
 import "../src/assets/css/custom.css";
+import "../src/assets/css/animations.css";
+import "../src/assets/css/responsive.css";
 
 import Routers from "./Routers";
 import ScrollUpBtn from "./components/others/ScrollUpBtn";

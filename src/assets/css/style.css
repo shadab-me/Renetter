@@ -1710,30 +1710,6 @@ p {
   border-color: var(--dark);
 }
 
-.btn.btn-border-dark.animation::after {
-  position: absolute;
-  top: 0;
-  right: inherit;
-  bottom: inherit;
-  left: 0;
-  content: "";
-  height: 100%;
-  width: 0;
-  z-index: -1;
-  background: var(--dark);
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-
-.btn.btn-border-dark.animation:hover {
-  border-color: var(--dark);
-  color: var(--white);
-}
-
-.btn.btn-border-dark.animation:hover::after {
-  width: 100%;
-}
-
 .btn.btn-border-theme {
   border: 2px solid var(--color-primary);
   background: transparent;
