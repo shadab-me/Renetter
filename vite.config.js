@@ -14,9 +14,12 @@ export default defineConfig({
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
-      external: ["@rollup/rollup-linux-x64-gnu"],
       output: {
-        manualChunks: undefined,
+        manualChunks: (id) => {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
       },
     },
     commonjsOptions: {
