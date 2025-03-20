@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ModalVideo from "react-modal-video";
 import { HashLink as Link } from "react-router-hash-link";
-import ReactWOW from "react-wow";
+import { motion } from "framer-motion";
 import WhyChooseUsV4Data from "../../jsonData/WhyChooseUsV4Data.json";
 import SingleChooseV3 from "./SingleChooseV4";
 
@@ -20,18 +20,30 @@ const WhyChooseUsV4 = () => {
                 AI-Powered Solutions <br /> For Every Challenge
               </h2>
               <div className="choose-us-thumb mt-50 mt-xs-40">
-                <ReactWOW animation="fadeInUp">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <img src="/img/illustration/6.png" alt="AI Innovation" />
-                </ReactWOW>
-                <ReactWOW animation="fadeInDown">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
                   <img src="/img/illustration/7.png" alt="Machine Learning" />
-                </ReactWOW>
-                <ReactWOW animation="fadeInRight">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
                   <img
                     src="/img/illustration/5.png"
                     alt="Digital Transformation"
                   />
-                </ReactWOW>
+                </motion.div>
               </div>
             </div>
             <div className="col-lg-5 pl-70 pl-md-15 pl-xs-15 choose-us-style-one">

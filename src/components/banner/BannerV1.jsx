@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-import ReactWOW from "react-wow";
+import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
 import { mainHeadingDarkStyle } from "../../styles/CommonStyles";
 
@@ -23,10 +23,10 @@ const BannerV1 = () => {
               <div className="row align-center">
                 <div className="col-xl-8 col-lg-8 pr-50 pr-md-15 pr-xs-15 mt--80 mt-md-0 mt-xs-0">
                   <div className="information">
-                    <ReactWOW
-                      animation="fadeInUp"
-                      duration="400ms"
-                      delay="500ms"
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.5 }}
                     >
                       <h2 style={mainHeadingDarkStyle}>
                         Renetter
@@ -36,11 +36,11 @@ const BannerV1 = () => {
                         </strong>{" "}
                         Engineered for Growth
                       </h2>
-                    </ReactWOW>
-                    <ReactWOW
-                      animation="fadeInUp"
-                      delay="900ms"
-                      duration="400ms"
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.9 }}
                     >
                       <p>
                         At Renetter, we are a team of passionate developers
@@ -48,18 +48,18 @@ const BannerV1 = () => {
                         applications. We craft digital solutions that not only
                         meet expectations but set new benchmarks for success.
                       </p>
-                    </ReactWOW>
-                    <ReactWOW
-                      animation="fadeInDown"
-                      delay="1200ms"
-                      duration="400ms"
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, y: -20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 1.2 }}
                     >
                       <div className="button">
                         <Link className="btn btn-md btn-theme" to="/contact-us">
                           Let's Talk
                         </Link>
                       </div>
-                    </ReactWOW>
+                    </motion.div>
                   </div>
                 </div>
                 <div className="col-xl-6 col-lg-6 pl-60 pl-md-15 pl-xs-15">
