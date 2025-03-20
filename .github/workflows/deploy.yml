@@ -31,8 +31,8 @@ jobs:
         run: |
           rm -rf node_modules
           rm -f package-lock.json
-          npm install
-          npm install @rollup/rollup-linux-x64-gnu
+          npm install --force
+          npm install @rollup/rollup-linux-x64-gnu --force
 
       - name: Build
         run: npm run build
