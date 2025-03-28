@@ -22,6 +22,8 @@ import AiFaq from "../../components/AiFaq";
 import AiDescription from "../../components/AiDescription";
 import AiSynonymHandler from "../../components/AiSynonymHandler";
 import "../../assets/css/header.css";
+import BannerV4 from "../../components/banner/BannerV4";
+import SingleBannerV4 from "../../components/banner/SingleBannerV4";
 
 const Home3 = () => {
   const localBusinessSchema = {
@@ -89,7 +91,7 @@ const Home3 = () => {
       <AiDescription />
       <AiSynonymHandler />
       <HeaderV6 />
-      <BannerV1 />
+      <BannerV4 />
       <TrustedTeams />
       <ServicesV1 />
       <WorkWithExperts />
