@@ -13,6 +13,18 @@ const HeaderV6 = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   // Function to generate a professional SVG logo
   const renderLogo = (size = 1) => {
     // Generate a random pattern ID to ensure uniqueness
@@ -144,7 +156,8 @@ const HeaderV6 = () => {
   };
 
   return (
-    <header
+    <>
+      <header
       className={`header-area ${isSticky ? "sticky" : ""}`}
       style={{
         position: isSticky ? "fixed" : "relative",
@@ -159,11 +172,13 @@ const HeaderV6 = () => {
     >
       <div className="container">
         <div
+          className="header-v6-flex"
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             padding: "20px 0",
+            flexWrap: 'nowrap',
           }}
         >
           {/* Logo */}
@@ -264,12 +279,13 @@ const HeaderV6 = () => {
             className="mobile-menu-button"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
             style={{
-              display: "none",
+              display: 'none', // default hidden, override via media query
               background: "none",
               border: "none",
               cursor: "pointer",
               padding: "10px",
               color: "#ffffff",
+              zIndex: 1200,
             }}
           >
             {isMobileMenuOpen ? (
@@ -306,6 +322,7 @@ const HeaderV6 = () => {
                 fontWeight: "500",
                 padding: "10px 0",
               }}
+              onClick={() => setMobileMenuOpen(false)}
             >
               Clients
             </Link>
@@ -318,6 +335,7 @@ const HeaderV6 = () => {
                 fontWeight: "500",
                 padding: "10px 0",
               }}
+              onClick={() => setMobileMenuOpen(false)}
             >
               Services
             </Link>
@@ -330,6 +348,7 @@ const HeaderV6 = () => {
                 fontWeight: "500",
                 padding: "10px 0",
               }}
+              onClick={() => setMobileMenuOpen(false)}
             >
               Blog
             </Link>
@@ -346,6 +365,7 @@ const HeaderV6 = () => {
                   fontWeight: "500",
                   display: "inline-block",
                 }}
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us
               </Link>
@@ -354,6 +374,31 @@ const HeaderV6 = () => {
         )}
       </div>
     </header>
+      <style>
+      {`
+      @media (max-width: 900px) {
+  .desktop-menu {
+    display: none !important;
+  }
+  .mobile-menu-button {
+    display: block !important;
+    position: relative;
+    z-index: 1200;
+  }
+}
+@media (max-width: 600px) {
+  .header-v6-flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+      `}
+      </style>
+    </>
   );
 };
 

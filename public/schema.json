@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Renetter",
+  "url": "https://renetter.com",
+  "logo": "https://renetter.com/img/logo/logo.png",
+  "description": "AI-powered digital solutions for business growth and transformation",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "email": "contact@renetter.com",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://facebook.com/renetter",
+    "https://twitter.com/renetter",
+    "https://linkedin.com/company/renetter"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://renetter.com"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "itemOffered": [
+      {
+        "@type": "Service",
+        "name": "AI-Powered Digital Solutions",
+        "description": "Custom AI solutions to transform your business processes and increase efficiency"
+      },
+      {
+        "@type": "Service",
+        "name": "Web Development",
+        "description": "Professional web development services for businesses of all sizes"
+      },
+      {
+        "@type": "Service",
+        "name": "Mobile App Development",
+        "description": "Custom mobile applications for iOS and Android platforms"
+      }
+    ]
+  }
+}
