@@ -62,9 +62,9 @@ const Home3 = () => {
   return (
     <>
       <SeoHelmet
-        title="RENETTER AGENCY - Top Digital Solutions Provider in Moradabad"
-        description="Leading digital solutions agency in Moradabad offering web development, mobile apps, digital marketing and AI solutions. Serving Moradabad, Sambhal, Rampur and nearby areas."
-        keywords="web development Moradabad, digital marketing Moradabad, AI solutions UP, mobile apps Moradabad, digital agency Moradabad, web design UP, IT services Moradabad, Renator agency, Renetter"
+        title="RENETTER AGENCY | Web Development, Digital Marketing & AI Solutions Moradabad"
+        description="RENETTER AGENCY is the leading digital agency in Moradabad, Uttar Pradesh. We offer expert web development, mobile app development, digital marketing, SEO, social media management, and AI-powered business solutions for businesses in Moradabad, Sambhal, Rampur, Amroha, Bijnor, and beyond."
+        keywords="web development Moradabad, digital marketing Moradabad, SEO Moradabad, AI solutions UP, mobile apps Moradabad, digital agency Moradabad, web design UP, IT services Moradabad, Renator agency, Renetter, social media marketing Moradabad, ecommerce development Moradabad, software company Moradabad, business automation Moradabad, local SEO Moradabad, branding Moradabad, PPC Moradabad, content marketing Moradabad, custom software Moradabad, best digital agency Moradabad, online marketing Moradabad, Renetter Agency Moradabad, Renator Moradabad"
         ogUrl="https://renetter.com"
         ogImage="/img/logo/logo.png"
         canonicalUrl="https://renetter.com"

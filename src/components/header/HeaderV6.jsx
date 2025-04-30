@@ -45,6 +45,8 @@ const HeaderV6 = () => {
         viewBox="0 0 160 40"
         xmlns="http://www.w3.org/2000/svg"
         style={{ maxWidth: "100%", height: "auto" }}
+        aria-label="RENETTER Agency Logo - Web Development, Digital Marketing, AI Solutions Moradabad"
+        role="img"
       >
         {/* Define patterns and effects */}
         <defs>
@@ -158,18 +160,22 @@ const HeaderV6 = () => {
   return (
     <>
       <header
-      className={`header-area ${isSticky ? "sticky" : ""}`}
+      className={`header-v6 ${isSticky ? "sticky" : ""}`}
       style={{
-        position: isSticky ? "fixed" : "relative",
+        background: isSticky ? "#0F1A2A" : "transparent",
+        boxShadow: isSticky ? "0 2px 8px rgba(0,0,0,0.08)" : "none",
+        transition: "all 0.3s cubic-bezier(.4,2,.6,1)",
+        position: "fixed",
         top: 0,
         left: 0,
-        right: 0,
-        zIndex: 1000,
-        backgroundColor: "#0F1A2A",
-        boxShadow: isSticky ? "0 2px 10px rgba(0,0,0,0.2)" : "none",
-        transition: "all 0.3s ease",
+        width: "100%",
+        zIndex: 1200,
       }}
     >
+      {/* SEO tagline for semantic relevance */}
+      <div style={{position: 'absolute', left: '-9999px', height: 0, width: 0, overflow: 'hidden'}}>
+        <h1>RENETTER AGENCY - Web Development, Digital Marketing, SEO, Mobile Apps & AI Solutions in Moradabad, Uttar Pradesh</h1>
+      </div>
       <div className="container">
         <div
           className="header-v6-flex"
@@ -196,6 +202,7 @@ const HeaderV6 = () => {
           {/* Desktop Menu */}
           <nav
             className="desktop-menu"
+            aria-label="Main Navigation"
             style={{
               display: isMobileMenuOpen ? "none" : "flex",
               alignItems: "center",
