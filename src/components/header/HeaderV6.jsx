@@ -25,135 +25,25 @@ const HeaderV6 = () => {
     };
   }, [isMobileMenuOpen]);
 
-  // Function to generate a professional SVG logo
+  // Function to render the new professional logo
   const renderLogo = (size = 1) => {
-    // Generate a random pattern ID to ensure uniqueness
-    const patternId = `header-pattern-${Math.random()
-      .toString(36)
-      .substring(2, 10)}`;
-
-    const gradientId = `header-gradient-${Math.random()
-      .toString(36)
-      .substring(2, 10)}`;
-
-    const glowId = `header-glow-${Math.random().toString(36).substring(2, 10)}`;
-
     return (
-      <svg
-        width={160 * size}
-        height={40 * size}
-        viewBox="0 0 160 40"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ maxWidth: "100%", height: "auto" }}
-        aria-label="RENETTER Agency Logo - Web Development, Digital Marketing, AI Solutions Moradabad"
-        role="img"
-      >
-        {/* Define patterns and effects */}
-        <defs>
-          {/* Main gradient for circle */}
-          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0062FF" />
-            <stop offset="100%" stopColor="#6C47FF" />
-          </linearGradient>
-
-          {/* Background pattern */}
-          <pattern
-            id={patternId}
-            patternUnits="userSpaceOnUse"
-            width="10"
-            height="10"
-            patternTransform="rotate(45)"
-          >
-            <rect width="10" height="10" fill="#0062FF" fillOpacity="0.03" />
-            <circle cx="5" cy="5" r="1" fill="#6C47FF" fillOpacity="0.1" />
-          </pattern>
-
-          {/* Glow filter */}
-          <filter id={glowId} x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="2" result="blur" />
-            <feFlood floodColor="#0062FF" floodOpacity="0.3" result="color" />
-            <feComposite in="color" in2="blur" operator="in" result="glow" />
-            <feMerge>
-              <feMergeNode in="glow" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-
-          {/* Shadow filter */}
-          <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feDropShadow dx="0" dy="1" stdDeviation="2" floodOpacity="0.3" />
-          </filter>
-        </defs>
-
-        {/* Subtle background */}
-        <rect
-          x="0"
-          y="0"
-          width="160"
-          height="40"
-          rx="8"
-          fill={`url(#${patternId})`}
-          fillOpacity="0.2"
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <img 
+          src="/assets/img/renetter-logo.svg" 
+          alt="Renetter Logo" 
+          style={{ width: `${40 * size}px`, height: `${40 * size}px` }} 
         />
-
-        {/* Logo Mark with enhanced "R" */}
-        <g>
-          {/* Outer glow ring */}
-          <circle
-            cx="20"
-            cy="20"
-            r="17"
-            fill="none"
-            stroke={`url(#${gradientId})`}
-            strokeWidth="0.5"
-            strokeOpacity="0.6"
-            filter={`url(#${glowId})`}
-          />
-
-          {/* Main circle */}
-          <circle
-            cx="20"
-            cy="20"
-            r="15"
-            fill={`url(#${gradientId})`}
-            stroke="rgba(255,255,255,0.4)"
-            strokeWidth="1"
-            filter="url(#shadow)"
-          />
-
-          {/* "R" letter with better visibility */}
-          <text
-            x="20"
-            y="20"
-            dominantBaseline="middle"
-            textAnchor="middle"
-            fontSize="24"
-            fontFamily="'Montserrat', 'Poppins', sans-serif"
-            fontWeight="900"
-            fill="white"
-            letterSpacing="0"
-            style={{ textShadow: "0px 1px 2px rgba(0,0,0,0.3)" }}
-          >
-            R
-          </text>
-        </g>
-
-        {/* Company Name with modern styling - ensuring full "RENETTER" is visible */}
-        <text
-          x="45"
-          y="22"
-          dominantBaseline="middle"
-          textAnchor="start"
-          fontSize="18"
-          fontFamily="'Montserrat', 'Poppins', sans-serif"
-          fontWeight="700"
-          fill="white"
-          letterSpacing="1"
-          filter="url(#shadow)"
-        >
+        <span style={{ 
+          fontSize: `${24 * size}px`, 
+          fontWeight: '800', 
+          letterSpacing: '1px', 
+          color: '#fff',
+          fontFamily: "'Inter', 'Montserrat', sans-serif"
+        }}>
           RENETTER
-        </text>
-      </svg>
+        </span>
+      </div>
     );
   };
 
@@ -162,9 +52,11 @@ const HeaderV6 = () => {
       <header
       className={`header-v6 ${isSticky ? "sticky" : ""}`}
       style={{
-        background: isSticky ? "#0F1A2A" : "transparent",
-        boxShadow: isSticky ? "0 2px 8px rgba(0,0,0,0.08)" : "none",
-        transition: "all 0.3s cubic-bezier(.4,2,.6,1)",
+        background: isSticky ? "rgba(5, 5, 5, 0.9)" : "transparent",
+        backdropFilter: isSticky ? "blur(20px)" : "none",
+        boxShadow: isSticky ? "0 4px 30px rgba(0, 0, 0, 0.1)" : "none",
+        borderBottom: isSticky ? "1px solid rgba(255, 255, 255, 0.05)" : "1px solid transparent",
+        transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         position: "fixed",
         top: 0,
         left: 0,
@@ -248,11 +140,17 @@ const HeaderV6 = () => {
             <Link
               to="/blog"
               style={{
-                color: "#086AD8",
+                color: "#ffffff",
                 textDecoration: "none",
                 fontSize: "16px",
                 fontWeight: "500",
                 transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.color = "#086AD8";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.color = "#ffffff";
               }}
             >
               Blog
@@ -313,7 +211,8 @@ const HeaderV6 = () => {
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundColor: "#0F1A2A",
+              backgroundColor: "#050505",
+              backdropFilter: "blur(20px)",
               padding: "40px 20px",
               display: "flex",
               flexDirection: "column",

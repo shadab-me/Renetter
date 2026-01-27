@@ -1,44 +1,43 @@
 import React from "react";
 import HeaderV6 from "../../components/header/HeaderV6";
-import FooterV1 from "../../components/footer/FooterV1";
+import FooterRedesign from "../../components/footer/FooterRedesign";
 import BlogArticles from "../../components/blog/BlogArticles";
 
 const BlogPage = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <>
+    <div className="renetter-redesign">
       <HeaderV6 />
-      <div className="blog-hero-banner">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="blog-hero-content text-center">
-                <div className="blog-icon-wrapper mb-4">
-                  <img
-                    src="/assets/img/blog/blog-icon.svg"
-                    alt="Blog"
-                    width="120"
-                    height="120"
-                  />
-                </div>
-                <h1 className="blog-title">Renetter Blog</h1>
-                <p className="blog-subtitle">
-                  Insights, trends, and expertise from our digital agency team
-                </p>
-              </div>
-            </div>
+      
+      {/* Hero Section - Minimalist Dark */}
+      <section className="hero-section" style={{ 
+        background: '#0a0a0a',
+        paddingTop: '120px',
+        minHeight: '60vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center'
+      }}>
+        <div className="renetter-container">
+          <div className="hero-content" style={{ margin: '0 auto' }}>
+            <h1 className="hero-title" style={{ fontSize: '3.5rem', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+              Our Insights
+            </h1>
+            <p className="hero-subtitle" style={{ fontSize: '1.25rem', color: '#a1a1aa', maxWidth: '700px', margin: '0 auto' }}>
+              Expert perspectives on AI, web development, and digital strategy.
+            </p>
           </div>
         </div>
-        <div className="blog-shape-background">
-          <img
-            src="/assets/img/blog/blog-shape.svg"
-            alt=""
-            className="blog-shape"
-          />
-        </div>
-      </div>
+      </section>
+
       <BlogArticles />
-      <FooterV1 />
-    </>
+      
+      <FooterRedesign />
+    </div>
   );
 };
 

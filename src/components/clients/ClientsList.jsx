@@ -1,189 +1,105 @@
 import React from "react";
 
 const ClientsList = () => {
-  // Define client data with inline SVG logos instead of image paths
+  // Client Data
   const clients = [
-    {
-      id: 1,
-      name: "Leverage Edu",
-      category: "Education",
-      website: "https://leverageedu.com/",
-      logoColor: "#3367D6", // Blue
-    },
-    {
-      id: 2,
-      name: "Alt Campus",
-      category: "Education",
-      website: "https://altcampus.io/",
-      logoColor: "#FF5733", // Orange
-    },
-    {
-      id: 3,
-      name: "LPU",
-      category: "Education",
-      website: "https://www.lpu.in/",
-      logoColor: "#4CAF50", // Green
-    },
-    {
-      id: 4,
-      name: "Scaler",
-      category: "Education",
-      website: "https://www.scaler.com/",
-      logoColor: "#9C27B0", // Purple
-    },
-    {
-      id: 5,
-      name: "Byjus",
-      category: "Education",
-      website: "https://byjus.com/",
-      logoColor: "#2196F3", // Light Blue
-    },
-    {
-      id: 6,
-      name: "Vedantu",
-      category: "Education",
-      website: "https://www.vedantu.com/",
-      logoColor: "#E91E63", // Pink
-    },
-    {
-      id: 7,
-      name: "Paytm",
-      category: "Finance",
-      website: "https://paytm.com/",
-      logoColor: "#00BCD4", // Cyan
-    },
-    {
-      id: 8,
-      name: "PhonePe",
-      category: "Finance",
-      website: "https://www.phonepe.com/",
-      logoColor: "#673AB7", // Deep Purple
-    },
-    {
-      id: 9,
-      name: "RazorPay",
-      category: "Finance",
-      website: "https://razorpay.com/",
-      logoColor: "#3F51B5", // Indigo
-    },
-    {
-      id: 10,
-      name: "Groww",
-      category: "Finance",
-      website: "https://groww.in/",
-      logoColor: "#009688", // Teal
-    },
-    {
-      id: 11,
-      name: "Swiggy",
-      category: "Food Delivery",
-      website: "https://www.swiggy.com/",
-      logoColor: "#FF9800", // Orange
-    },
-    {
-      id: 12,
-      name: "Zomato",
-      category: "Food Delivery",
-      website: "https://www.zomato.com/",
-      logoColor: "#F44336", // Red
-    },
+    { id: 1, name: "Leverage Edu", category: "Education", website: "https://leverageedu.com/" },
+    { id: 2, name: "Alt Campus", category: "Education", website: "https://altcampus.io/" },
+    { id: 3, name: "LPU", category: "Education", website: "https://www.lpu.in/" },
+    { id: 4, name: "Scaler", category: "Education", website: "https://www.scaler.com/" },
+    { id: 5, name: "Byjus", category: "Education", website: "https://byjus.com/" },
+    { id: 6, name: "Vedantu", category: "Education", website: "https://www.vedantu.com/" },
+    { id: 7, name: "Paytm", category: "Finance", website: "https://paytm.com/" },
+    { id: 8, name: "PhonePe", category: "Finance", website: "https://www.phonepe.com/" },
+    { id: 9, name: "RazorPay", category: "Finance", website: "https://razorpay.com/" },
+    { id: 10, name: "Groww", category: "Finance", website: "https://groww.in/" },
+    { id: 11, name: "Swiggy", category: "Food Delivery", website: "https://www.swiggy.com/" },
+    { id: 12, name: "Zomato", category: "Food Delivery", website: "https://www.zomato.com/" },
   ];
 
-  // Function to generate SVG logo based on company name and color
-  const generateLogo = (name, color) => {
-    // Extract initials from company name
-    const initials = name
-      .split(" ")
-      .map((word) => word[0])
-      .join("")
-      .toUpperCase()
-      .slice(0, 2);
-
-    // Create a lighter shade of the main color for background
-    const lighterColor = color;
-
-    // Generate a random pattern ID to ensure uniqueness
-    const patternId = `pattern-${Math.random().toString(36).substring(2, 10)}`;
-
-    return (
-      <svg
-        width="160"
-        height="100"
-        viewBox="0 0 160 100"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ maxWidth: "100%", height: "auto" }}
-      >
-        {/* Define a pattern for the background */}
-        <defs>
-          <pattern
-            id={patternId}
-            patternUnits="userSpaceOnUse"
-            width="20"
-            height="20"
-            patternTransform="rotate(45)"
-          >
-            <rect
-              width="20"
-              height="20"
-              fill={lighterColor}
-              fillOpacity="0.05"
-            />
-            <circle cx="10" cy="10" r="2" fill={color} fillOpacity="0.1" />
-          </pattern>
-        </defs>
-
-        {/* Background with pattern */}
-        <rect width="160" height="100" rx="10" fill={`url(#${patternId})`} />
-
-        {/* Logo outline */}
-        <rect x="30" y="15" width="100" height="70" rx="8" fill="white" />
-
-        {/* Colored rectangle behind text */}
-        <rect
-          x="35"
-          y="20"
-          width="90"
-          height="60"
-          rx="5"
-          fill={color}
-          fillOpacity="0.1"
-        />
-
-        {/* Circle with Initials */}
-        <circle cx="80" cy="45" r="25" fill={color} />
-        <text
-          x="80"
-          y="45"
-          dominantBaseline="middle"
-          textAnchor="middle"
-          fontSize="24"
-          fontWeight="bold"
-          fill="white"
-          letterSpacing="1"
-        >
-          {initials}
-        </text>
-
-        {/* Company Name */}
-        <text
-          x="80"
-          y="85"
-          dominantBaseline="middle"
-          textAnchor="middle"
-          fontSize="12"
-          fontWeight="bold"
-          fill={color}
-        >
-          {name}
-        </text>
-
-        {/* Decorative elements */}
-        <circle cx="35" cy="20" r="2" fill={color} />
-        <circle cx="125" cy="20" r="2" fill={color} />
-        <circle cx="35" cy="80" r="2" fill={color} />
-        <circle cx="125" cy="80" r="2" fill={color} />
-      </svg>
-    );
+  // Render Real Logos as Inline SVGs
+  const renderClientLogo = (name) => {
+    switch (name) {
+      case "Paytm":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <text x="50" y="20" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="22">
+               <tspan fill="#002E6E">Pay</tspan><tspan fill="#00BAF2">tm</tspan>
+             </text>
+          </svg>
+        );
+      case "Zomato":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="20" dominantBaseline="middle" textAnchor="middle" fontFamily="Georgia, serif" fontWeight="900" fontStyle="italic" fontSize="24" fill="#E23744" letterSpacing="-1px">zomato</text>
+          </svg>
+        );
+      case "Swiggy":
+         return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="20" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="22" fill="#FC8019" letterSpacing="-0.5px">SWIGGY</text>
+          </svg>
+        );
+      case "PhonePe":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <rect x="5" y="0" width="90" height="32" rx="4" fill="#5F259F" />
+             <text x="50" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="18" fill="white">PhonePe</text>
+          </svg>
+        );
+      case "Leverage Edu":
+        return (
+           <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <text x="60" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="18"><tspan fill="#2F54EB">Leverage</tspan> <tspan fill="#000000">Edu</tspan></text>
+           </svg>
+        );
+      case "Alt Campus":
+        return (
+          <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="60" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="monospace" fontWeight="bold" fontSize="18" fill="#FF5733">&lt;AltCampus/&gt;</text>
+          </svg>
+        );
+      case "LPU":
+        return (
+          <svg width="80" height="32" viewBox="0 0 80 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <rect x="0" y="0" width="80" height="32" rx="0" fill="#F58220" />
+             <text x="40" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="serif" fontWeight="bold" fontSize="18" fill="white">LPU</text>
+          </svg>
+        );
+      case "Scaler":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <text x="50" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="20" fill="#335eea">SCALER</text>
+          </svg>
+        );
+      case "Byjus":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="20" fill="#8E44AD">BYJU'S</text>
+          </svg>
+        );
+      case "Vedantu":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <text x="50" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="20" fill="#EAB543">Vedantu</text>
+          </svg>
+        );
+       case "RazorPay":
+        return (
+          <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <rect x="0" y="0" width="110" height="32" rx="4" fill="#3395ff" />
+             <text x="55" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="16" fill="white">Razorpay</text>
+          </svg>
+        );
+        case "Groww":
+        return (
+          <svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <text x="50" y="22" dominantBaseline="middle" textAnchor="middle" fontFamily="sans-serif" fontWeight="bold" fontSize="20" fill="#00D09C">Groww</text>
+          </svg>
+        );
+      default:
+        return <span style={{fontSize: '18px', fontWeight: 'bold'}}>{name}</span>; 
+    }
   };
 
   // Group clients by category
@@ -196,72 +112,56 @@ const ClientsList = () => {
   }, {});
 
   return (
-    <div className="client-list-area default-padding">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-8 offset-lg-2">
-            <div className="site-heading text-center">
-              <h5 className="sub-title">Trusted By Industry Leaders</h5>
-              <h2 className="title">Companies That Trust Us</h2>
-              <p className="mt-4">
-                We're proud to have earned the trust of these industry-leading
-                companies. Our partnerships enable us to deliver exceptional
-                digital solutions across various sectors.
-              </p>
-            </div>
-          </div>
-        </div>
-
+    <div className="client-list-area" style={{ background: '#ffffff', padding: '80px 0' }}>
+      <div className="renetter-container">
+        
         {Object.entries(groupedClients).map(([category, categoryClients]) => (
-          <div className="client-category-section mt-5" key={category}>
-            <h3 className="category-title">{category}</h3>
-            <div className="row clients-row">
+          <div key={category} style={{ marginBottom: '80px' }}>
+            <h3 style={{ 
+              fontSize: '1.5rem', 
+              color: '#000', 
+              marginBottom: '30px', 
+              borderBottom: '2px solid #f3f4f6', 
+              paddingBottom: '10px',
+              display: 'inline-block'
+            }}>
+              {category}
+            </h3>
+            <div className="services-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))' }}>
               {categoryClients.map((client) => (
-                <div
-                  className="col-lg-3 col-md-4 col-sm-6 mb-4"
+                <a 
                   key={client.id}
+                  href={client.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
                 >
-                  <a
-                    href={client.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="client-item-link"
+                  <div 
+                    className="premium-card" 
+                    style={{ 
+                      padding: '30px', 
+                      background: '#f9fafb', 
+                      borderColor: '#e5e7eb',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      height: '100%',
+                      minHeight: '120px',
+                      boxShadow: 'none'
+                    }}
+                    onMouseEnter={e => {e.currentTarget.style.background = '#fff'; e.currentTarget.style.borderColor = '#3b82f6'; e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.05)'}}
+                    onMouseLeave={e => {e.currentTarget.style.background = '#f9fafb'; e.currentTarget.style.borderColor = '#e5e7eb'; e.currentTarget.style.boxShadow = 'none'}}
                   >
-                    <div className="client-item">
-                      <div className="client-logo">
-                        {generateLogo(client.name, client.logoColor)}
-                      </div>
-                      <h4 className="client-name">{client.name}</h4>
-                      <div className="client-website">Visit Website</div>
+                    <div style={{ transform: 'scale(1.1)' }}>
+                      {renderClientLogo(client.name)}
                     </div>
-                  </a>
-                </div>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
         ))}
 
-        <div className="row mt-5">
-          <div className="col-lg-10 offset-lg-1">
-            <div className="client-testimonial-highlight text-center">
-              <h3>What Our Clients Say</h3>
-              <p className="mt-4">
-                "Working with this team has been transformative for our
-                business. Their technical expertise, combined with their deep
-                understanding of our needs, delivered solutions that exceeded
-                our expectations. They're truly partners in our success."
-              </p>
-              <div className="mt-3">
-                <strong>Rahul Verma</strong> — Senior Team Lead, Leverage Edu
-              </div>
-              <div className="mt-4">
-                <a href="/contact" className="btn btn-light animation">
-                  Become Our Client <i className="fas fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

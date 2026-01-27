@@ -93,188 +93,171 @@ const BlogArticles = () => {
   };
 
   return (
-    <div className="blog-articles-area default-padding">
-      <div className="container">
-        {/* Blog Header */}
-        <div className="row">
-          <div className="col-lg-8 offset-lg-2">
-            <div className="site-heading text-center">
-              <h5 className="sub-title">Our Latest Articles</h5>
-              <h2 className="title">Insights & Digital Expertise</h2>
-              <p className="mt-4">
-                Stay updated with the latest trends, best practices, and
-                insights on web development, mobile applications, AI solutions,
-                and digital strategy from our experts.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Search and Filter Section */}
-        <div className="row mb-5">
-          <div className="col-lg-8">
-            <div className="blog-categories">
-              <ul className="category-filter d-flex flex-wrap">
-                <li
-                  className={`${activeCategory === "all" ? "active" : ""}`}
-                  onClick={() => handleCategoryClick("all")}
-                >
-                  <span className="category-icon-wrapper">
-                    <img
-                      src="/assets/img/blog/category-icon.svg"
-                      alt="All"
-                      width="24"
-                      height="24"
-                    />
-                  </span>
-                  All
-                </li>
-                {categories.map((category, index) => (
-                  <li
-                    key={index}
-                    className={`${activeCategory === category ? "active" : ""}`}
-                    onClick={() => handleCategoryClick(category)}
-                  >
-                    <span className="category-icon-wrapper">
-                      <img
-                        src={getCategoryIcon(category)}
-                        alt={category}
-                        width="24"
-                        height="24"
-                      />
-                    </span>
-                    {category}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div className="col-lg-4">
-            <div className="blog-search">
+    <div className="blog-articles-area" style={{ padding: '80px 0', background: '#fff' }}>
+      <div className="renetter-container">
+        
+        {/* Search and Category Filter */}
+        <div style={{ marginBottom: '60px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', alignItems: 'center' }}>
+            
+            {/* Search */}
+             <div style={{ width: '100%', maxWidth: '600px', position: 'relative' }}>
               <input
                 type="text"
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="form-control"
+                style={{
+                  width: '100%',
+                  padding: '16px 24px',
+                  borderRadius: '50px',
+                  border: '1px solid #e5e7eb',
+                  fontSize: '1rem',
+                  outline: 'none',
+                  background: '#f9fafb',
+                  transition: 'border-color 0.3s'
+                }}
+                onFocus={(e) => e.target.style.borderColor = '#3b82f6'}
+                onBlur={(e) => e.target.style.borderColor = '#e5e7eb'}
               />
+              <i className="fas fa-search" style={{ position: 'absolute', right: '24px', top: '50%', transform: 'translateY(-50%)', color: '#9ca3af' }}></i>
+            </div>
+
+            {/* Filters */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+              <button
+                className={`btn-premium ${activeCategory === "all" ? "btn-primary" : "btn-outline"}`}
+                onClick={() => handleCategoryClick("all")}
+                style={{ padding: '10px 24px', fontSize: '0.9rem', borderWidth: '1px' }}
+              >
+                All
+              </button>
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`btn-premium ${activeCategory === category ? "btn-primary" : "btn-outline"}`}
+                  onClick={() => handleCategoryClick(category)}
+                  style={{ 
+                    padding: '10px 24px', 
+                    fontSize: '0.9rem', 
+                    borderWidth: '1px',
+                    color: activeCategory === category ? '#fff' : '#111827',
+                    borderColor: activeCategory === category ? 'transparent' : '#e5e7eb'
+                  }}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Featured Article */}
         {featuredArticle && (
-          <div className="row mb-5">
-            <div className="col-lg-12">
-              <div className="featured-article">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="featured-article-image">
-                      <img
-                        src={
-                          featuredArticle.featuredImage ||
-                          `/assets/img/blog/${featuredArticle.category
-                            .toLowerCase()
-                            .replace(/\s+/g, "-")}-icon.svg`
-                        }
-                        alt={featuredArticle.title}
-                        className="img-fluid rounded"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = "/assets/img/blog/blog-icon.svg";
-                        }}
-                      />
-                    </div>
+          <div className="mb-5">
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '24px', color: '#111827', borderLeft: '4px solid #3b82f6', paddingLeft: '16px' }}>Featured</h2>
+            <Link to={`/blog/${featuredArticle.slug}`} style={{ textDecoration: 'none' }}>
+              <div className="premium-card" style={{ 
+                background: '#f9fafb', 
+                padding: '0', 
+                display: 'grid', 
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+                gap: '0', 
+                overflow: 'hidden',
+                borderColor: '#e5e7eb',
+                boxShadow: 'none',
+                transition: 'transform 0.3s ease, border-color 0.3s ease'
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.borderColor = '#3b82f6';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = '#e5e7eb';
+              }}
+              >
+                <div style={{ height: '400px', overflow: 'hidden' }}>
+                   <img
+                    src={featuredArticle.featuredImage || `/assets/img/blog/${(featuredArticle.category || 'default').toLowerCase().replace(/\s+/g, "-")}-icon.svg`}
+                    alt={featuredArticle.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/800x600?text=Renetter+Blog"; }}
+                  />
+                </div>
+                <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ display: 'flex', gap: '15px', fontSize: '0.9rem', color: '#6b7280', marginBottom: '16px' }}>
+                    <span style={{ color: '#3b82f6', fontWeight: '600' }}>{featuredArticle.category}</span>
+                    <span>•</span>
+                    <span>{formatDate(featuredArticle.publishDate)}</span>
                   </div>
-                  <div className="col-lg-6">
-                    <div className="featured-article-content">
-                      <div className="article-meta">
-                        <span className="category">
-                          <img
-                            src={getCategoryIcon(featuredArticle.category)}
-                            alt={featuredArticle.category}
-                            width="16"
-                            height="16"
-                            className="me-2"
-                          />
-                          {featuredArticle.category}
-                        </span>
-                        <span className="date">
-                          <i className="fas fa-calendar-alt me-1"></i>{" "}
-                          {formatDate(featuredArticle.publishDate)}
-                        </span>
-                      </div>
-                      <h2 className="article-title">{featuredArticle.title}</h2>
-                      <p className="article-excerpt">
-                        {featuredArticle.excerpt}
-                      </p>
-                      <Link
-                        to={`/blog/${featuredArticle.slug}`}
-                        className="btn btn-theme animation"
-                      >
-                        Read Article <i className="fas fa-arrow-right"></i>
-                      </Link>
-                    </div>
+                  <h2 style={{ fontSize: '2.5rem', fontFamily: 'Inter, sans-serif', fontWeight: '700', marginBottom: '16px', color: '#111827', lineHeight: '1.2' }}>
+                    {featuredArticle.title}
+                  </h2>
+                  <p style={{ color: '#4b5563', lineHeight: '1.6', fontSize: '1.1rem', marginBottom: '24px' }}>
+                    {featuredArticle.excerpt}
+                  </p>
+                  <div style={{ color: '#3b82f6', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    Read Article <i className="fas fa-arrow-right"></i>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         )}
 
         {/* Article Grid */}
-        <div className="row">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
           {remainingArticles.map((article) => (
-            <div className="col-lg-4 col-md-6 mb-4" key={article.id}>
-              <div className="article-card h-100">
-                <div className="article-image">
-                  <Link to={`/blog/${article.slug}`}>
-                    <img
-                      src={
-                        article.featuredImage ||
-                        `/assets/img/blog/${article.category
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}-icon.svg`
-                      }
-                      alt={article.title}
-                      className="img-fluid rounded"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "/assets/img/blog/blog-icon.svg";
-                      }}
-                    />
-                  </Link>
+            <Link to={`/blog/${article.slug}`} key={article.id} style={{ textDecoration: 'none' }}>
+              <div className="premium-card" style={{ 
+                background: '#fff', 
+                padding: '0', 
+                height: '100%', 
+                display: 'flex', 
+                flexDirection: 'column',
+                overflow: 'hidden',
+                borderColor: '#e5e7eb',
+                boxShadow: 'none',
+                transition: 'all 0.3s ease'
+              }}
+               onMouseEnter={e => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.borderColor = '#3b82f6';
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(0,0,0,0.05)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = '#e5e7eb';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+              >
+                <div style={{ height: '240px', overflow: 'hidden' }}>
+                  <img
+                    src={article.featuredImage || `/assets/img/blog/${(article.category || 'default').toLowerCase().replace(/\s+/g, "-")}-icon.svg`}
+                    alt={article.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    onError={(e) => { e.target.onerror = null; e.target.src = "https://via.placeholder.com/600x400?text=Renetter+Blog"; }}
+                  />
                 </div>
-                <div className="article-content p-4">
-                  <div className="article-meta">
-                    <span className="category">
-                      <img
-                        src={getCategoryIcon(article.category)}
-                        alt={article.category}
-                        width="16"
-                        height="16"
-                        className="me-2"
-                      />
-                      {article.category}
-                    </span>
-                    <span className="date">
-                      <i className="fas fa-calendar-alt me-1"></i>{" "}
-                      {formatDate(article.publishDate)}
-                    </span>
+                <div style={{ padding: '30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ display: 'flex', gap: '10px', fontSize: '0.85rem', color: '#6b7280', marginBottom: '12px' }}>
+                    <span style={{ color: '#3b82f6', fontWeight: '600' }}>{article.category}</span>
+                    <span>•</span>
+                    <span>{formatDate(article.publishDate)}</span>
                   </div>
-                  <h3 className="article-title">
-                    <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+                  <h3 style={{ fontSize: '1.5rem', fontFamily: 'Inter, sans-serif', fontWeight: '700', marginBottom: '12px', color: '#111827', lineHeight: '1.4' }}>
+                    {article.title}
                   </h3>
-                  <p className="article-excerpt">{article.excerpt}</p>
-                  <Link
-                    to={`/blog/${article.slug}`}
-                    className="btn btn-sm btn-theme"
-                  >
-                    Read Article <i className="fas fa-arrow-right"></i>
-                  </Link>
+                  <p style={{ color: '#4b5563', lineHeight: '1.6', fontSize: '1rem', marginBottom: '20px', flex: 1 }}>
+                    {article.excerpt}
+                  </p>
+                  <div style={{ color: '#3b82f6', fontWeight: '600', display: 'flex', alignItems: 'center', gap: '8px', marginTop: 'auto' }}>
+                    Read More <i className="fas fa-arrow-right"></i>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -282,9 +265,9 @@ const BlogArticles = () => {
         {remainingArticles.length === 0 && !featuredArticle && (
           <div className="row">
             <div className="col-lg-12 text-center py-5">
-              <h3>No articles found matching your search criteria.</h3>
+              <h3 style={{ fontFamily: 'Inter, sans-serif' }}>No articles found matching your search criteria.</h3>
               <button
-                className="btn btn-theme mt-3"
+                className="btn-premium btn-primary mt-3"
                 onClick={() => {
                   setSearchTerm("");
                   setActiveCategory("all");

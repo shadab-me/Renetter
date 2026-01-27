@@ -1,5 +1,5 @@
 import React from "react";
-import FooterV1 from "../../components/footer/FooterV1";
+import FooterRedesign from "../../components/footer/FooterRedesign";
 import ContactV1Reverse from "../../components/contact/ContactV1Reverse";
 import ProjectInMind from "../../components/contact/ProjectInMind";
 import { Helmet } from "react-helmet";
@@ -7,7 +7,7 @@ import HeaderV6 from "../../components/header/HeaderV6";
 
 const ContactUs = () => {
   return (
-    <>
+    <div className="renetter-redesign">
       <Helmet>
         <title>Contact Renetter - Launch Your AI-Powered Project</title>
         <meta
@@ -21,28 +21,37 @@ const ContactUs = () => {
       </Helmet>
       <HeaderV6 />
 
-      {/* Dark Hero Banner */}
-      <div className="service-hero-banner">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-10 offset-lg-1">
-              <div className="service-hero-content">
-                <h1 className="service-title">Launch Your Dream Project</h1>
-                <p>
-                  Get in touch with our team to discuss your project
-                  requirements. We're ready to help you transform your ideas
-                  into exceptional digital experiences.
-                </p>
-              </div>
-            </div>
+      {/* Hero Section - Minimalist Dark (Matching Clients/Services) */}
+      <section className="hero-section" style={{ 
+        background: '#0a0a0a',
+        paddingTop: '120px',
+        minHeight: '60vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        textAlign: 'center'
+      }}>
+        <div className="renetter-container">
+          <div className="hero-content" style={{ margin: '0 auto' }}>
+            <h1 className="hero-title" style={{ fontSize: '3.5rem', letterSpacing: '-0.02em', marginBottom: '20px' }}>
+              Let's Build Something Extraordinary
+            </h1>
+            <p className="hero-subtitle" style={{ fontSize: '1.25rem', color: '#a1a1aa', maxWidth: '700px', margin: '0 auto' }}>
+              Have a project in mind? We're here to help you transform your ideas into exceptional digital experiences.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
+
 
       <ContactV1Reverse />
-      <ProjectInMind />
-      <FooterV1 />
-    </>
+      
+      {/* CTA Section - Dark Background (Matching Services) */}
+      <div style={{ background: '#0a0a0a', padding: '100px 0' }}>
+         <ProjectInMind />
+      </div>
+      <FooterRedesign />
+    </div>
   );
 };
 

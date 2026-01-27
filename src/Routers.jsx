@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home3 from "./pages/homePages/Home3";
+import HomeRedesign from "./pages/homePages/HomeRedesign";
 import Services from "./pages/servicePages/Services";
 import ServiceDetail from "./pages/servicePages/ServiceDetail";
 import BlogPage from "./pages/blog/BlogPage";
@@ -14,7 +14,7 @@ const Routers = () => {
     <>
       <Routes>
         {/* Home Page - Digital Marketing Agency */}
-        <Route path="/" element={<Home3 />}></Route>
+        <Route path="/" element={<HomeRedesign />}></Route>
 
         {/* Services Pages */}
         <Route path="/services" element={<Services />}></Route>

@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="20" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main shape: Abstract Digital Node / Letter R -->
+  <path d="M140 100 H260 C360 100 360 250 260 250 H240 L340 412 H220 L140 280 V412 H60 V100 Z" 
+        fill="url(#primaryGradient)" 
+        stroke="none" />
+        
+  <!-- Tech Accent: Digital Dot -->
+  <circle cx="360" cy="150" r="30" fill="#a78bfa" filter="url(#glow)" opacity="0.8" />
+  
+  <!-- Tech Accent: Connecting Line -->
+  <path d="M360 180 V250" stroke="#a78bfa" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 10" opacity="0.6" />
+</svg>

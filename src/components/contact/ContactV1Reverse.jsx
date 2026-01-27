@@ -6,19 +6,21 @@ const ContactV1Reverse = () => {
   return (
     <>
       <div
-        className="contact-area overflow-hidden default-padding"
-        style={{ backgroundImage: "url(/img/shape/map.png)" }}
+        className="contact-area"
+        style={{ padding: "100px 0", background: "#fff", position: "relative" }}
       >
-        <div className="shape-right-bottom">
-          <img src="/img/shape/18.png" alt="Shape" />
-        </div>
         <div className="container">
-          <div className="row align-center">
-            <div className="col-tact-stye-one col-lg-6">
+          <div className="row">
+            {/* Form Section - Left */}
+            <div className="col-lg-7 pr-50 pr-md-15 pr-xs-15">
               <ContactForm />
             </div>
-            <div className="col-tact-stye-one col-lg-5 offset-lg-1 mt--80 mt-md-50 mt-xs-50">
-              <ContactInfo />
+            
+            {/* Contact Info Section - Right */}
+            <div className="col-lg-5">
+              <div style={{ position: 'sticky', top: '120px' }}>
+                <ContactInfo />
+              </div>
             </div>
           </div>
         </div>
@@ -32,7 +34,7 @@ const ContactV1Reverse = () => {
               <div className="map-full">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.108240830687!2d77.35015676109216!3d28.62749479760489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5456d92317d%3A0x5634a29c15c6678e!2sSector%2062%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1719312654651!5m2!1sen!2sin"
-                  style={{ border: "0", width: "100%", height: "500px" }}
+                  style={{ border: "0", width: "100%", height: "450px", filter: "grayscale(100%) invert(92%) contrast(83%)" }}
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
