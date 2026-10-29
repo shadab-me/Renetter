@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "The Future of Web Development: Trends to Watch in 2024",
+    "title": "The Future of Web Development: Trends to Watch",
     "slug": "future-web-development-trends-2024",
     "category": "Web Development",
     "excerpt": "Explore the cutting-edge trends shaping the future of web development including headless architecture, WebAssembly, AI-driven interfaces, and progressive web apps that are transforming how businesses build their digital presence.",
@@ -12,7 +12,13 @@
     "author": "Vikram Patel",
     "authorImage": "/assets/img/team/team-1.jpg",
     "authorPosition": "Lead Web Developer",
-    "tags": ["Web Development", "React", "PWA", "WebAssembly", "Headless CMS"]
+    "tags": [
+      "Web Development",
+      "React",
+      "PWA",
+      "WebAssembly",
+      "Headless CMS"
+    ]
   },
   {
     "id": 2,

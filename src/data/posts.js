@@ -1,0 +1,68 @@
+// Original advisory articles by the Renetter team. General guidance only:
+// no statistics, no named clients, no invented results.
+// Block types: { h: "heading" }, { p: "paragraph" }, { ul: ["item", ...] }.
+
+export const POSTS = [
+  {
+    slug: "website-brief-that-works",
+    title: "What a good website brief looks like",
+    excerpt: "Five questions that save weeks of rework and make your quote more accurate.",
+    readingTime: 4,
+    date: "2026-10-12",
+    body: [
+      { p: "Most website projects that run late were late on day one, because the brief was vague. A good brief does not need to be long. It needs to answer a few questions plainly." },
+      { h: "1. Who is the page for?" },
+      { p: "Name one primary visitor. A clinic owner and a first-time patient need different pages. If you try to speak to everyone, the page speaks to no one." },
+      { h: "2. What should they do next?" },
+      { p: "Pick a single main action: book a call, request a quote, start a trial. Every section of the page should either lead to that action or remove a doubt that blocks it." },
+      { h: "3. What do they doubt?" },
+      { p: "List the objections you hear on sales calls. Price, timelines, whether you serve their kind of business, whether you will still be around next year. A strong page answers these before the visitor has to ask." },
+      { h: "4. What proof do you have?" },
+      { p: "Reviews, named customers, certifications, a short case study. Real proof beats clever copy. If you do not have it yet, say so, and we plan how to collect it." },
+      { h: "5. What does success look like?" },
+      { p: "Be specific: more enquiries from search, fewer unqualified leads, a faster page on mobile. A clear goal lets us decide what to build first and what to leave for later." },
+      { ul: ["Share two or three sites you like and say why.", "Send the pages you already have, even if they are rough.", "Tell us your deadline and what is driving it."] },
+    ],
+  },
+  {
+    slug: "where-ai-automation-pays-off-first",
+    title: "Where AI automation pays off first",
+    excerpt: "How to pick the first process worth automating, and what to leave alone.",
+    readingTime: 5,
+    date: "2026-10-19",
+    body: [
+      { p: "Most businesses do not need a grand AI strategy. They need one repetitive task taken off a person's plate, done reliably. Start there." },
+      { h: "Look for work that is repeated, rule-based and boring" },
+      { p: "Good first candidates share three traits. They happen often, they follow a pattern a new hire could learn in a day, and a mistake is cheap to catch. Examples are sorting incoming enquiries, drafting first replies for a human to approve, summarising calls into a CRM, and answering the same support questions." },
+      { h: "Keep a person in the loop at first" },
+      { p: "Let the system draft and a person approve. Once you trust the output on real cases, you can remove the approval step for the simplest categories and keep it for the rest." },
+      { h: "Use your own documents" },
+      { p: "An assistant that answers from your own policies, product sheets and past tickets is far more useful than a generic chatbot. This is usually done with retrieval: the system looks up the right passage first, then writes the answer from it. It also makes answers easier to check." },
+      { h: "Measure before and after" },
+      { p: "Time one week of the manual task first. After launch, measure the same thing. If the saving is small, stop. If it is large, move to the next process." },
+      { h: "What to leave alone" },
+      { ul: ["Decisions with legal or safety consequences.", "Anything where a wrong answer is expensive and hard to notice.", "Processes that change every week and have no stable rules."] },
+    ],
+  },
+  {
+    slug: "visits-but-no-enquiries",
+    title: "Why your site gets visits but no enquiries",
+    excerpt: "The common reasons visitors leave, and the order to fix them in.",
+    readingTime: 4,
+    date: "2026-10-26",
+    body: [
+      { p: "Traffic without enquiries is frustrating, and it is usually fixable. The cause is rarely one big thing. It is a handful of small friction points that add up." },
+      { h: "The page does not say what you do" },
+      { p: "A visitor should understand what you offer, who it is for and what to do next within a few seconds. If the headline is a slogan, replace it with a plain sentence." },
+      { h: "The site is slow or awkward on a phone" },
+      { p: "Most first visits happen on a phone. Open your own site on mobile data. If text is small, buttons are hard to tap or the page jumps while loading, visitors leave." },
+      { h: "There is no obvious next step" },
+      { p: "One clear button, repeated in the right places, beats five competing links. Make the main action visible without scrolling and again at the end of the page." },
+      { h: "The form asks for too much" },
+      { p: "Every extra field costs you some people. Ask only for what you need to reply, and tell people what happens after they submit." },
+      { h: "Nothing builds trust" },
+      { p: "Show real names, real work and a way to reach a person. A visible phone number or WhatsApp link reassures visitors more than a long list of claims." },
+      { p: "Fix these in order: message, speed, next step, form, trust. Then test one change at a time so you know what worked." },
+    ],
+  },
+];
