@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /thank-you
 
-# Optimize crawling
-Crawl-delay: 10
-
-# Sitemap
-Sitemap: https://renetter.com/sitemap.xml 
+Sitemap: https://renetter.com/sitemap.xml

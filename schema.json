@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Renetter",
+  "url": "https://renetter.com",
+  "logo": "https://renetter.com/favicon.svg",
+  "description": "Websites, AI automation and growth marketing for ambitious businesses.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@renetter.com",
+    "availableLanguage": [
+      "English",
+      "Hindi"
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/renetter",
+    "https://www.instagram.com/renetter_agency",
+    "https://twitter.com/renetter"
+  ]
+}

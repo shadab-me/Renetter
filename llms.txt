@@ -1,0 +1,10 @@
+# Renetter
+
+> Renetter is a small, senior team that designs and builds websites and web apps, AI automation, and SEO and growth marketing for businesses in the US, UK and Gulf. Fixed-scope projects, weekly demos, remote delivery.
+
+## Pages
+- [Services](https://renetter.com/services): websites and web apps, AI automation, SEO and growth marketing
+- [Case studies](https://renetter.com/case-studies): what clients needed and what we built
+- [Clients](https://renetter.com/clients): teams and industries we work with
+- [Free audit](https://renetter.com/free-audit): send a website, get three specific changes back
+- [Contact](https://renetter.com/contact-us): email info@renetter.com
